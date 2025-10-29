@@ -46,8 +46,8 @@ while True:
 
     if feedback:
         print("Suggestions:")
-    for tip in feedback:
-        print("-", tip)
+    for suggestion in feedback:
+        print("-", suggestion)
 
     redo = input("Would you like to try another password? ").lower()
 
