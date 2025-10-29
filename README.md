@@ -32,5 +32,5 @@ This project is perfect for beginners who want to:
 
 1. **Clone or download** this repository  
    ```bash
-   git clone https://github.com/yourusername/password-strength-checker.git
+   git clone https://github.com/Maximxukk/Complexity-Password-Check.git
    cd password-strength-checker
