@@ -22,7 +22,7 @@ while True:
         if any(char in special_characters for char in password):
             score += 1
         else:
-            feedback.append("At least one special character")
+            feedback.append("At least one special character(!@#$%^&*()-_=+[]{};:,.<>?/)")
     
         if any(char.isdigit() for char in password):
             score += 1
@@ -36,13 +36,20 @@ while True:
         else:
             strength = 'Strong'
     
-        print("Your password is", strength , "\nHere is your feedback! \n", feedback)
+        return strength, feedback
 
     user_password = input('What is your password: ')
-    check_password_strength(user_password)
+
+    strength, feedback = check_password_strength(user_password)
+
+    print(f"\nPassword Strength: {strength}")
+
+    if feedback:
+        print("Suggestions:")
+    for tip in feedback:
+        print("-", tip)
 
     redo = input("Would you like to try another password? ").lower()
-
 
     if redo == 'no':
         break
